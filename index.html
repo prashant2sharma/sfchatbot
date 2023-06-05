@@ -30,14 +30,14 @@ https://www.tooplate.com/view/2095-level
           <![endif]-->
 
         <style type='text/css'>
-        .embeddedServiceHelpButton .helpButton .uiButton {
-            background-color: #F12E26;
-            font-family: "Georgia", sans-serif;
-        }
-        .embeddedServiceHelpButton .helpButton .uiButton:focus {
-            outline: 1px solid #F12E26;
-        }
-    </style>
+		.embeddedServiceHelpButton .helpButton .uiButton {
+			background-color: #FD1919;
+			font-family: "Comic Sans MS", sans-serif;
+		}
+		.embeddedServiceHelpButton .helpButton .uiButton:focus {
+			outline: 1px solid #FD1919;
+		}
+	</style>
 </head>
 
     <body>
@@ -395,57 +395,57 @@ https://www.tooplate.com/view/2095-level
         <script src="js/jquery.singlePageNav.min.js"></script>      <!-- Single Page Nav (https://github.com/ChrisWojcik/single-page-nav) -->
         <script src="slick/slick.min.js"></script>                  <!-- http://kenwheeler.github.io/slick/ -->
         <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
-        <script type='text/javascript'>
-            var initESW = function(gslbBaseURL) {
-                embedded_svc.settings.displayHelpButton = true; //Or false
-                embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
+	<script type='text/javascript'>
+		var initESW = function(gslbBaseURL) {
+			embedded_svc.settings.displayHelpButton = true; //Or false
+			embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
 
-                //embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
-                //embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
+			//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
+			//embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
 
-                //embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
-                //embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
+			//embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
+			//embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
 
-                // Settings for Chat
-                //embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
-                    // Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
-                    // Returns a valid button ID.
-                //};
-                //embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
-                //embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
-                //embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
+			// Settings for Chat
+			//embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
+				// Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
+				// Returns a valid button ID.
+			//};
+			//embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
+			//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
+			//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
 
-                embedded_svc.settings.enabledFeatures = ['LiveAgent'];
-                embedded_svc.settings.entryFeature = 'LiveAgent';
+			embedded_svc.settings.enabledFeatures = ['LiveAgent'];
+			embedded_svc.settings.entryFeature = 'LiveAgent';
 
-                embedded_svc.init(
-                    'https://prashantkrsharma-dev-ed.my.salesforce.com',
-                    'https://prashantkrsharma-dev-ed.my.site.com/defaulthelpcenter8Aug',
-                    gslbBaseURL,
-                    '00D5i000001uwWY',
-                    'OKA_Salesforce',
-                    {
-                        baseLiveAgentContentURL: 'https://c.la2-c2-hnd.salesforceliveagent.com/content',
-                        deploymentId: '5725i0000009E3S',
-                        buttonId: '5735i0000009FWN',
-                        baseLiveAgentURL: 'https://d.la2-c2-hnd.salesforceliveagent.com/chat',
-                        eswLiveAgentDevName: 'OKA_Salesforce',
-                        isOfflineSupportEnabled: true
-                    }
-                );
-            };
+			embedded_svc.init(
+				'https://prashantkrsharma-dev-ed.my.salesforce.com',
+				'https://prashantkrsharma-dev-ed.my.site.com/defaulthelpcenter8Aug',
+				gslbBaseURL,
+				'00D5i000001uwWY',
+				'OKA_Salesforce_Live',
+				{
+					baseLiveAgentContentURL: 'https://c.la2-c2-hnd.salesforceliveagent.com/content',
+					deploymentId: '5725i0000009E3S',
+					buttonId: '5735i0000009Ff7',
+					baseLiveAgentURL: 'https://d.la2-c2-hnd.salesforceliveagent.com/chat',
+					eswLiveAgentDevName: 'OKA_Salesforce_Live',
+					isOfflineSupportEnabled: true
+				}
+			);
+		};
 
-            if (!window.embedded_svc) {
-                var s = document.createElement('script');
-                s.setAttribute('src', 'https://prashantkrsharma-dev-ed.my.salesforce.com/embeddedservice/5.0/esw.min.js');
-                s.onload = function() {
-                    initESW(null);
-                };
-                document.body.appendChild(s);
-            } else {
-                initESW('https://service.force.com');
-            }
-        </script>
+		if (!window.embedded_svc) {
+			var s = document.createElement('script');
+			s.setAttribute('src', 'https://prashantkrsharma-dev-ed.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+			s.onload = function() {
+				initESW(null);
+			};
+			document.body.appendChild(s);
+		} else {
+			initESW('https://service.force.com');
+		}
+	</script>
         <script>
 
             /* Google map
